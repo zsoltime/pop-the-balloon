@@ -1,0 +1,140 @@
+html
+  height: 100%
+
+body
+  align-items: flex-start
+  background: #fff
+  display: flex
+  height: 100%
+  justify-content: center
+  margin: 0
+  position: relative
+  transition: background-color .5s ease
+
+.green
+  background: rgb(160, 205, 95)
+
+.red
+  background: rgb(235, 130, 130)
+
+.blue
+  background: rgb(130, 210, 250)
+
+.purple
+  background: rgb(205, 145, 215)
+
+.amber
+  background: rgb(255, 235, 180)
+
+#p5
+  display: flex
+  flex-direction: column-reverse
+  user-select: none
+
+.statusbar
+  align-items: center
+  background: color(bluegrey, dark)
+  display: flex
+  height: 10vh
+  justify-content: space-around
+  z-index: 3
+
+canvas
+  box-shadow: 0 0 50px rgba(black, 0.2)
+  z-index: 1
+
+.bomb
+  align-items: center
+  cursor: pointer
+  display: flex
+  justify-content: center
+  position: relative
+  transition: transform .3s ease
+  filter: grayscale(100) brightness(1.5)
+  opacity: .8
+
+  &:hover
+    transform: scale(.9)
+
+.available
+  animation: 5s 1s infinite forwards ease-in-out push
+  filter: none
+  opacity: 1
+
+.amount
+  background: crimson
+  border-radius: 50%
+  font-weight: 100
+  font-size: 2vmin
+  height: 2em
+  left: 57%
+  line-height: 2
+  position: absolute
+  top: 17%
+  text-align: center
+  width: 2em
+  z-index: 10
+
+.timer
+  align-items: center
+  color: rgba(white, .7)
+  display: flex
+  font-size: 5vmin
+  font-weight: 100
+  height: 100%
+
+.bg
+  bottom: 0
+  color: rgba(0, 0, 0, 0.1)
+  cursor: default
+  font-size: 15vh
+  height: 100%
+  left: 0
+  line-height: 30vh
+  position: fixed
+  right: 0
+  text-align: center
+  top: 0
+  user-select: none
+  width: 100%
+  z-index: 0
+
+  span
+    display: block
+
+.splash
+  background: red
+  height: 100vh
+  left: 0
+  padding: 1.25rem
+  position: fixed
+  top: 0
+  width: 100vw
+
+  div
+    align-items: center
+    display: flex
+    flex: 1 0 0
+    flex-wrap: wrap
+
+p
+  width: 100%
+
+@keyframes push
+  from
+    transform: scale(1)
+
+  5%
+    transform: scale(1.1)
+
+  7%
+    transform: scale(1)
+
+  8%
+    transform: scale(1.2)
+
+  10%
+    transform: scale(1)
+
+  to
+    transform: scale(1)
